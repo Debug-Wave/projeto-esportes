@@ -1,3 +1,7 @@
+<?php
+    include('assets/php/conexao.php');
+    include('assets/php/listar.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -9,7 +13,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
         <link rel="manifest" href="assets/img/favicon/site.webmanifest">
-        <title>Calendário</title>
+        <title>Ranking</title>
     </head>
     <body>
         <header>
@@ -20,13 +24,13 @@
                 <div class="nav-list">
                     <ul>
                         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="calendario.html" class="nav-link">Calendário</a></li>
+                        <li class="nav-item"><a href="calendario.php" class="nav-link">Calendário</a></li>
                         <li class="nav-item"><a href="torneios.html" class="nav-link">Torneios</a></li>
-                        <li class="nav-item"><a href="ranking.html" class="nav-link">Premiações</a></li>
+                        <li class="nav-item"><a href="ranking.php" class="nav-link">Premiações</a></li>
                     </ul>
                 </div> <!-- Fim div nav-list -->
                 <div class="nav-button">
-                    <button><a href="#">Administração</a></button>
+                    <button><a href="assets/php/admin.php">Administração</a></button>
                 </div> <!-- Fim div nav-button -->
                 <div class="mobile-menu-icon">
                     <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt="três barrinhas"></button>
@@ -36,34 +40,20 @@
             <div class="mobile-menu">
                 <ul>
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="calendario.html" class="nav-link">Calendário</a></li>
+                    <li class="nav-item"><a href="calendario.php" class="nav-link">Calendário</a></li>
                     <li class="nav-item"><a href="torneios.html" class="nav-link">Torneios</a></li>
-                    <li class="nav-item"><a href="ranking.html" class="nav-link">Premiações</a></li>
+                    <li class="nav-item"><a href="ranking.php" class="nav-link">Premiações</a></li>
                 </ul>
                 <div class="nav-button">
-                    <button><a href="#">Administração</a></button>
+                    <button><a href="assets/php/admin.php">Administração</a></button>
                 </div> <!-- Fim div nav-button -->
             </div> <!-- Fim div mobile-menu -->
         </header> <!-- Fim header -->
-
-        <main id="calendário-main">
-            <div id="calendário-content">
-                    <div class="block-content-calendario">
-                        <div class="calendario-pt-1">
-                            <h2>JEESP</h2>
-                            <h2>Futsal</h2>
-                        </div>
-                        <div class="calendario-pt-2">
-                            <h2>ETEC de Peruíbe</h2>
-                            <h3>Vs</h3>
-                            <h2>Itanhaém</h2>
-                        </div>
-                        <div class="calendario-pt-3">
-                            <p>DD/MM/AAAA</p>
-                            <p>HH:MM</p>
-                            <p>Local</p>
-                        </div>
-                    </div>
+        <main id="ranking-main">
+            <div id="ranking-content">
+                    <?php
+                        listarPremios();
+                    ?>
             </div>
         </main> <!-- Fim main -->
 
