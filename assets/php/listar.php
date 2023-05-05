@@ -104,3 +104,94 @@
             echo '</tbody></table>';
         }
     }
+
+    function listarJeespXad(){
+        $sql = 'SELECT * FROM tb_participante WHERE modaljesp = "xadrez" ORDER BY time';
+        $res = $GLOBALS['mysqli']->query($sql);
+
+        if ($res){
+            echo '<table><thead><tr><th>Time</th><th>Nome</th><th>Sala</th></tr></thead><tbody>';
+            while($row = $res->fetch_assoc()){
+                echo '<tr><td>'.$row['time'].'</td><td>'.$row['nome'].'</td><td>'.$row['sala'].'</td></tr>';
+            }
+            echo '</tbody></table>';
+        }
+    }
+
+    function listarJeespDam(){
+        $sql = 'SELECT * FROM tb_participante WHERE modaljesp = "dama" ORDER BY time';
+        $res = $GLOBALS['mysqli']->query($sql);
+
+        if ($res){
+            echo '<table><thead><tr><th>Time</th><th>Nome</th><th>Sala</th></tr></thead><tbody>';
+            while($row = $res->fetch_assoc()){
+                echo '<tr><td>'.$row['time'].'</td><td>'.$row['nome'].'</td><td>'.$row['sala'].'</td></tr>';
+            }
+            echo '</tbody></table>';
+        }
+    }
+
+    function listarJeespPin(){
+        $sql = 'SELECT * FROM tb_participante WHERE modaljesp = "pingpong" ORDER BY time';
+        $res = $GLOBALS['mysqli']->query($sql);
+
+        if ($res){
+            echo '<table><thead><tr><th>Time</th><th>Nome</th><th>Sala</th></tr></thead><tbody>';
+            while($row = $res->fetch_assoc()){
+                echo '<tr><td>'.$row['time'].'</td><td>'.$row['nome'].'</td><td>'.$row['sala'].'</td></tr>';
+            }
+            echo '</tbody></table>';
+        }
+    }
+
+    function listarEspVal(){
+        $sql = 'SELECT * FROM tb_participante WHERE foco = "valorant" ORDER BY time';
+        $res = $GLOBALS['mysqli']->query($sql);
+
+        if ($res){
+            echo '<table><thead><tr><th>Time</th><th>Nome</th><th>Sala</th></tr></thead><tbody>';
+            while($row = $res->fetch_assoc()){
+                echo '<tr><td>'.$row['time'].'</td><td>'.$row['nome'].'</td><td>'.$row['sala'].'</td></tr>';
+            }
+            echo '</tbody></table>';
+        }
+    }
+
+    function listarEspLol(){
+        $sql = 'SELECT * FROM tb_participante WHERE foco = "lol" ORDER BY time';
+        $res = $GLOBALS['mysqli']->query($sql);
+
+        if ($res){
+            echo '<table><thead><tr><th>Time</th><th>Nome</th><th>Sala</th></tr></thead><tbody>';
+            while($row = $res->fetch_assoc()){
+                echo '<tr><td>'.$row['time'].'</td><td>'.$row['nome'].'</td><td>'.$row['sala'].'</td></tr>';
+            }
+            echo '</tbody></table>';
+        }
+    }
+
+    function listarEspFif(){
+        $sql = 'SELECT * FROM tb_participante WHERE foco = "fifa" ORDER BY time';
+        $res = $GLOBALS['mysqli']->query($sql);
+
+        if ($res){
+            echo '<table><thead><tr><th>Time</th><th>Nome</th><th>Sala</th></tr></thead><tbody>';
+            while($row = $res->fetch_assoc()){
+                echo '<tr><td>'.$row['time'].'</td><td>'.$row['nome'].'</td><td>'.$row['sala'].'</td></tr>';
+            }
+            echo '</tbody></table>';
+        }
+    }
+
+    function listarEspCsg(){
+        $sql = 'SELECT * FROM tb_participante WHERE foco = "csgo" ORDER BY time';
+        $res = $GLOBALS['mysqli']->query($sql);
+
+        if ($res){
+            echo '<table><thead><tr><th>Time</th><th>Nome</th><th>Sala</th></tr></thead><tbody>';
+            while($row = $res->fetch_assoc()){
+                echo '<tr><td>'.$row['time'].'</td><td>'.$row['nome'].'</td><td>'.$row['sala'].'</td></tr>';
+            }
+            echo '</tbody></table>';
+        }
+    }
