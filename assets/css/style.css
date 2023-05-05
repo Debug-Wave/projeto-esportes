@@ -478,15 +478,16 @@ section > #torneio-content > .block-content:hover {
 }
 
 .block-ranking {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
     background-color: #d1d1d1;
-    border-radius: 7px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 11px #00000070;
 }
 
 .block-ranking:hover {
@@ -504,6 +505,8 @@ section > #torneio-content > .block-content:hover {
     color: #4F0CD6;
     text-align: center;
     max-width: 100%;
+    font-size: 1.7em;
+    padding: 10px;
 }
 
 /*----------------------LOGIN------------------------*/
